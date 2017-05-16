@@ -34,6 +34,7 @@
             this.menuDGVGrouper = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDGVExt = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDataRepeater = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuCircularProg = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,10 +45,11 @@
             this.menuADGV,
             this.menuDGVGrouper,
             this.menuDGVExt,
-            this.menuDataRepeater});
+            this.menuDataRepeater,
+            this.menuCircularProg});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(513, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(627, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -86,11 +88,18 @@
             this.menuDataRepeater.Text = "DataRepeater";
             this.menuDataRepeater.Click += new System.EventHandler(this.menuDataRepeater_Click);
             // 
+            // menuCircularProg
+            // 
+            this.menuCircularProg.Name = "menuCircularProg";
+            this.menuCircularProg.Size = new System.Drawing.Size(94, 20);
+            this.menuCircularProg.Text = "Circular Prog.";
+            this.menuCircularProg.Click += new System.EventHandler(this.menuCircularProg_Click);
+            // 
             // FormMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 294);
+            this.ClientSize = new System.Drawing.Size(627, 389);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -111,5 +120,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuDGVGrouper;
         private System.Windows.Forms.ToolStripMenuItem menuDGVExt;
         private System.Windows.Forms.ToolStripMenuItem menuDataRepeater;
+        private System.Windows.Forms.ToolStripMenuItem menuCircularProg;
     }
 }
