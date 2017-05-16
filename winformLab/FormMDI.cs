@@ -67,10 +67,20 @@ namespace winformLab
             frm.Activate();
         }
 
-        private void menuCircularProg_Click(object sender, EventArgs e)
+        private void menuCircularProgToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // create new form
             Form frm = new FormCircularProgressBar();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+            frm.Activate();
+        }
+
+        private void circularProg2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // create new form
+            Form frm = new FormCircularProgressBar2();
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();

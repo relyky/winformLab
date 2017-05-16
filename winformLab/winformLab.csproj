@@ -78,6 +78,12 @@
     <Compile Include="FormCircularProgressBar.Designer.cs">
       <DependentUpon>FormCircularProgressBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCircularProgressBar2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCircularProgressBar2.Designer.cs">
+      <DependentUpon>FormCircularProgressBar2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDataGridViewExt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCircularProgressBar.resx">
       <DependentUpon>FormCircularProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCircularProgressBar2.resx">
+      <DependentUpon>FormCircularProgressBar2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDataGridViewExt.resx">
       <DependentUpon>FormDataGridViewExt.cs</DependentUpon>

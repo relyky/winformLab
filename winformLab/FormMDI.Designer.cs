@@ -35,6 +35,8 @@
             this.menuDGVExt = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDataRepeater = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCircularProg = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuCircularProgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.circularProg2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,10 +92,26 @@
             // 
             // menuCircularProg
             // 
+            this.menuCircularProg.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuCircularProgToolStripMenuItem,
+            this.circularProg2ToolStripMenuItem});
             this.menuCircularProg.Name = "menuCircularProg";
             this.menuCircularProg.Size = new System.Drawing.Size(94, 20);
             this.menuCircularProg.Text = "Circular Prog.";
-            this.menuCircularProg.Click += new System.EventHandler(this.menuCircularProg_Click);
+            // 
+            // menuCircularProgToolStripMenuItem
+            // 
+            this.menuCircularProgToolStripMenuItem.Name = "menuCircularProgToolStripMenuItem";
+            this.menuCircularProgToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.menuCircularProgToolStripMenuItem.Text = "CircularProg";
+            this.menuCircularProgToolStripMenuItem.Click += new System.EventHandler(this.menuCircularProgToolStripMenuItem_Click);
+            // 
+            // circularProg2ToolStripMenuItem
+            // 
+            this.circularProg2ToolStripMenuItem.Name = "circularProg2ToolStripMenuItem";
+            this.circularProg2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.circularProg2ToolStripMenuItem.Text = "CircularProg2";
+            this.circularProg2ToolStripMenuItem.Click += new System.EventHandler(this.circularProg2ToolStripMenuItem_Click);
             // 
             // FormMDI
             // 
@@ -121,5 +139,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuDGVExt;
         private System.Windows.Forms.ToolStripMenuItem menuDataRepeater;
         private System.Windows.Forms.ToolStripMenuItem menuCircularProg;
+        private System.Windows.Forms.ToolStripMenuItem menuCircularProgToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem circularProg2ToolStripMenuItem;
     }
 }
