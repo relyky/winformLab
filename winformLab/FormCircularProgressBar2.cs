@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -43,7 +44,7 @@ namespace winformLab
             // 置中
             circularProgressBar1.Left = this.Left + (this.Width - circularProgressBar1.Width) / 2;
             circularProgressBar1.Top = this.Top + (this.Height - circularProgressBar1.Height) / 2;
-            // reado to show
+            // ready to show
             circularProgressBar1.Visible = true;
             this.UpdateZOrder();
             await Task.Delay(100); // 等稍會兒，讓重設動畫跑完。
@@ -64,5 +65,61 @@ namespace winformLab
             circularProgressBar1.Visible = false;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //BatchDataProcess2Async();
+
+            BatchDataProcess3Async();
+
+        }
+
+        /// <summary>
+        /// longterm 計算
+        /// </summary>
+        private async Task BatchDataProcess2Async() // async method 非同步函式
+        {
+            ProgressForm.DoInitialize(10, 0, 1, this);
+
+            ProgressForm.DoShowProgress(3);
+
+            await Task.Delay(2000); // 等稍會兒
+
+            ProgressForm.DoStep();
+
+            await Task.Delay(2000); // 等稍會兒
+
+            ProgressForm.DoStep();
+
+            await Task.Delay(2000); // 等稍會兒
+
+            ProgressForm.DoStep();
+
+            await Task.Delay(2000); // 等稍會兒
+
+            ProgressForm.DoClose();
+
+        }
+
+        /// <summary>
+        /// longterm 計算
+        /// </summary>
+        private async Task BatchDataProcess3Async() // async method 非同步函式
+        {
+            ProgressForm.DoInitialize(20, 0, 1, this);
+
+            for (int i = 1; i <= 20; i++)
+            {
+                // do stuff
+                await Task.Delay(200); // 等稍會兒
+
+                // update progress
+                ProgressForm.DoShowProgress(i);
+                //ProgressForm.DoStep();
+            }
+
+            // done
+            await Task.Delay(500); // 等稍會兒，讓動畫跑完。
+            ProgressForm.DoClose();
+        }
     }
 }
